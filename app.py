@@ -7,7 +7,7 @@ from flask import Flask, request, json, Response, render_template, make_response
 app = Flask(__name__)
 ##when connecting from docker use host name from docker compose
 #mdb = MongoDBDAL("localhost", 27017, "mydatabase")
-mdb = MongoDBDAL("172.24.2.2", 27017, "mydatabase")
+mdb = MongoDBDAL("db_host", 27017, "mydatabase")
 TMDB = TMDBDownloader()
 #    TMDB.search_and_download(movie_name)
 
