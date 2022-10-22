@@ -1,6 +1,6 @@
 import requests
 from config import TMDB_API_Key_v3_auth
-import imdb #pip install cinemagoer
+import imdb
 
 
 def size_str_to_int(x: str) -> int:
