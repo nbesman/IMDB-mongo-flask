@@ -17,7 +17,6 @@ class TMDBDownloader:
         self.KEY = TMDB_API_Key_v3_auth
         self.url = self.CONFIG_PATTERN.format(key=self.KEY)
         self.config = requests.get(self.url).json()
-
         self.base_url = self.config['images']['base_url']
         self.sizes = self.config['images']['poster_sizes']
         self.max_size = max(self.sizes, key=size_str_to_int)  # use the sort function in max to get biggest size
